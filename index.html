@@ -39,11 +39,10 @@
         -->
         <span flex></span>
         <div hide show-gt-xs>
-          <md-button style="color: white;" href="#" scroll-to="about-1">About</md-button>
-          <md-button style="color: white;" href="#" scroll-to="rooms-1">Rooms</md-button>
-          <md-button style="color: white;" href="#" scroll-to="calendar-1">Calendar</md-button>
-          <md-button style="color: white;" href="#" scroll-to="book-contact-1">Book Now</md-button>
-          <md-button style="color: white;" href="#" scroll-to="book-contact-1">Contact</md-button>
+          <md-button style="color: white;" href="#" scroll-to="wid">What I Do</md-button>
+          <md-button style="color: white;" href="#" scroll-to="about">About</md-button>
+          <md-button style="color: white;" href="#" scroll-to="skills">Skills</md-button>
+          <md-button style="color: white;" href="#" scroll-to="education">Education</md-button>
         </div>
 
         <!--
@@ -54,11 +53,10 @@
                 <md-icon md-svg-icon="./img/icons/more_vert.svg"></md-icon>
             </md-button>
             <md-menu-content>
-              <md-menu-item><md-button ng-click="doSomething()" scroll-to="about-1">About</md-button></md-menu-item>
-              <md-menu-item><md-button ng-click="doSomething()" scroll-to="rooms-1">Rooms</md-button></md-menu-item>
-              <md-menu-item><md-button ng-click="doSomething()" scroll-to="calendar-1">Calendar</md-button></md-menu-item>
-              <md-menu-item><md-button ng-click="doSomething()" scroll-to="book-contact-1">Book Now</md-button></md-menu-item>
-              <md-menu-item><md-button ng-click="doSomething()" scroll-to="book-contact-1">Contact</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="wid">What I Do</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="about">About</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="skills">Skills</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="education">Education</md-button></md-menu-item>
             </md-menu-content>
         </md-menu>
       </div>
@@ -96,7 +94,7 @@
         </div>
       </nav>
 
-      <nav class="100picture" style="background-color: #673AB7;
+      <nav id="wid" class="100picture" style="background-color: #673AB7;
       text-align:center;
       height:100vh;
       background-size: auto 100vh;">
@@ -117,7 +115,7 @@
         </div>
       </nav>
 
-      <nav class="100picture" style="background-color: #2196F3;
+      <nav id="about" class="100picture" style="background-color: #2196F3;
       text-align:center;
       height:100vh;
       background-size: auto 100vh;
@@ -146,7 +144,7 @@
         </div>
       </nav>
 
-      <nav class="100picture" style="background-color: #009688;
+      <nav id="skills" class="100picture" style="background-color: #009688;
       text-align:center;
       height:100vh;
       background-size: auto 100vh;">
@@ -177,7 +175,7 @@
         </div>
       </nav>
 
-      <nav class="100picture" style="background-color: #3F51B5;
+      <nav id="education" class="100picture" style="background-color: #3F51B5;
       text-align:center;
       height:100vh;
       background-size: auto 100vh;">
