@@ -1,0 +1,43 @@
+md-card>img {
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+     height: auto !important;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(0,0,0,.48);
+}
+
+.100picture {
+  background: rgba(120,176,245,1);
+  background: -moz-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(120,176,245,1)), color-stop(100%, rgba(39,230,144,1)));
+  background: -webkit-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+  background: linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78b0f5', endColorstr='#27e690', GradientType=1 );
+  text-align:center;
+  height:100vh;
+  background-size: auto 100vh;
+}
+
+@media screen and (max-width: 450px) {
+    .100picture {
+        text-align:center;
+        height:100vh;
+        background-size: 100% auto;
+    }
+}
+
+iframe {
+  max-width: 100%
+}

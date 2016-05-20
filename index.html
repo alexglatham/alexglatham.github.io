@@ -1,0 +1,231 @@
+<!--
+
+  DEVELOPED, DESIGNED BY ALEX LATHAM, NICK WANNIGNER 2016
+
+
+  GENERAL INFORMATION FOR ANGULAR MATERIAL CAN BE FOUND HERE: material.angularjs.org
+
+-->
+
+
+<html lang="en" ng-app="ranch" >
+<head>
+  <title>Alex Latham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+  <link rel="stylesheet" href="css/style.css"> <!-- External CSS -->
+  <link rel="stylesheet" href="css/layout.css"> <!-- A custom gridding system for mobile devices -->
+  <meta name="theme-color" content="#1565C0">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="appCtrl" ng-cloak>
+    <!--
+     ______                  _   _
+     |_   _|  ___     ___   | | | |__     __ _   _ __
+      | |    / _ \   / _ \  | | | '_ \   / _` | | '__|
+      | |   | (_) | | (_) | | | | |_) | | (_| | | |
+      |_|    \___/   \___/  |_| |_.__/   \__,_| |_|
+
+    -->
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>Alex Latham</span>
+        </h2>
+
+        <!--
+        This is the desktop toolbar, and only shows if there's more pixels shown at a single time.
+        -->
+        <span flex></span>
+        <div hide show-gt-xs>
+          <md-button style="color: white;" href="#" scroll-to="about-1">About</md-button>
+          <md-button style="color: white;" href="#" scroll-to="rooms-1">Rooms</md-button>
+          <md-button style="color: white;" href="#" scroll-to="calendar-1">Calendar</md-button>
+          <md-button style="color: white;" href="#" scroll-to="book-contact-1">Book Now</md-button>
+          <md-button style="color: white;" href="#" scroll-to="book-contact-1">Contact</md-button>
+        </div>
+
+        <!--
+        This is the mobile menu, and only shows if a certain number of pixels can be displayed at one time.
+        -->
+        <md-menu hide show-xs md-position-mode="target-right target">
+            <md-button ng-click="$mdOpenMenu()" class="md-icon-button" aria-label="Open dropdown menu">
+                <md-icon md-svg-icon="./img/icons/more_vert.svg"></md-icon>
+            </md-button>
+            <md-menu-content>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="about-1">About</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="rooms-1">Rooms</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="calendar-1">Calendar</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="book-contact-1">Book Now</md-button></md-menu-item>
+              <md-menu-item><md-button ng-click="doSomething()" scroll-to="book-contact-1">Contact</md-button></md-menu-item>
+            </md-menu-content>
+        </md-menu>
+      </div>
+    </md-toolbar>
+
+    <!--
+      ____    ___    _   _   _____   _____   _   _   _____
+     / ___|  / _ \  | \ | | |_   _| | ____| | \ | | |_   _|
+    | |     | | | | |  \| |   | |   |  _|   |  \| |   | |
+    | |___  | |_| | | |\  |   | |   | |___  | |\  |   | |
+     \____|  \___/  |_| \_|   |_|   |_____| |_| \_|   |_|
+
+    -->
+
+    <nd-content>
+
+      <nav class="100picture" style="background: rgba(120,176,245,1);
+      background: -moz-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+      background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(120,176,245,1)), color-stop(100%, rgba(39,230,144,1)));
+      background: -webkit-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+      background: -o-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+      background: -ms-linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+      background: linear-gradient(45deg, rgba(120,176,245,1) 0%, rgba(39,230,144,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78b0f5', endColorstr='#27e690', GradientType=1 );
+      text-align:center;
+      height:100vh;
+      background-size: auto 100vh;">
+        <div class="container"  style="padding-top: 25vh">
+          <p style="color: white; font-size: 104px">
+            Alex Latham
+          </p>
+          <p style="color: white; font-size: 52px; margin-top: -80px">
+            Web developer, designer, orchestral and chiptune music lover
+          </p>
+        </div>
+      </nav>
+
+      <nav class="100picture" style="background-color: #673AB7;
+      text-align:center;
+      height:100vh;
+      background-size: auto 100vh;">
+        <div class="container"  style="padding-top: 25vh">
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            WEB DEVELOPER
+          </p>
+          <p style="color: white; font-size: 14pt">
+            I began web development as early as 2007 with little to no knowledge of HTML. In 2013, I learned HTML5, and began my journey into web development. In recent years, I've been interested in expanding my programming skills to include JavaScript and Angular 1.
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            DESIGNER
+          </p>
+          <p style="color: white; font-size: 14pt">
+            As new standards for design rolled out into the world, it peaked my interest to design - something beautiful and appealing to look at - and that's been my philosophy.
+          </p>
+        </div>
+      </nav>
+
+      <nav class="100picture" style="background-color: #2196F3;
+      text-align:center;
+      height:100vh;
+      background-size: auto 100vh;
+      margin-top: -100 !important;">
+        <div class="container"  style="padding-top: 25vh">
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            ADVENTURING INTO WEB APPS
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Currently planning a new way for students to get help. This web applicationw will be built with HTML, JavaScript, Angular, Node.js, and more. Expected release is late 2016 - early 2017.
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            INDIE GAME DEVELOPER
+          </p>
+          <p style="color: white; font-size: 14pt">
+            I picked up GameMaker 5 around 2006, and began to make small little games that went no where, including a Super Mario World engine prototype based on the Super Nintendo title, and many other dumb platformers.
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            GAMER
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Who doesn't love games. I started gaming around 2004 - 2005 with my Nintendo 64. Eventually moved onto PC games and game development with GameMaker 5.
+          </p>
+        </div>
+      </nav>
+
+      <nav class="100picture" style="background-color: #009688;
+      text-align:center;
+      height:100vh;
+      background-size: auto 100vh;">
+        <div class="container"  style="padding-top: 25vh">
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            WEB DEVELOPER
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Proficient in HTML5 and CSS3, some experience with GitHub
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            ART
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Knowledge of Adobe Photoshop CS6, CC 2014 and Illustrator CS6, CC 2014
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            The Best Chef Ever*
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Professional Cheese On Toast Maker Extraordinaire™
+            <p class="label" style="color: #E0E0E0">
+              not really please don't hire me to be a cook
+            </p>
+          </p>
+        </div>
+      </nav>
+
+      <nav class="100picture" style="background-color: #3F51B5;
+      text-align:center;
+      height:100vh;
+      background-size: auto 100vh;">
+        <div class="container"  style="padding-top: 25vh">
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            SCHOOL
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Currently a junior from Noblesville High School. Completed Computer Programming I, Web Design I & II.
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            FUTURE
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Planning to attend Ivy Tech, Neumont University or Staffordshire University
+          </p>
+          <br>
+          <p style="color: white; font-size: 32px; font-weight: 700">
+            CONTACT
+          </p>
+          <p style="color: white; font-size: 14pt">
+            Please feel free to Tweet at me: <a target="_blank" href="https://twitter.com/alexlatham_">@alexlatham_</a>
+          </p>
+        </div>
+      </nav>
+    </md-content>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+  <script src="js/angular-smooth-scroll.js"></script>
+
+  <!-- Your application bootstrap  -->
+  <script type="text/javascript">
+    /**
+     * You must include the dependency on 'ngMaterial'
+     */
+
+  </script>
+
+</body>
+</html>
